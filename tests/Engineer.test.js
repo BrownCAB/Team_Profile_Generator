@@ -1,5 +1,5 @@
 const Engineer = require('../lib/Engineer')
-const engineer = new engineer('jared', '101184', 'jared@faketech.com', '184'); 
+const engineer = new Engineer('jared', '101184', 'jared@faketech.com', '184'); 
 
 test ('Should create an instance of class engineer', () => {
    	expect(engineer.name).toBe('Jared')
@@ -24,7 +24,7 @@ test ('if we get the Role from getRole() method', () => {
    expect(engineer.getRole()).toBe('engineer');
 });
 
-test ('if we get the Role from getOfficeNumber() method', () => {
+test ('if we get the office number from getOfficeNumber() method', () => {
    expect(manager.getOfficeNumber()).toBe('184');
 });
 

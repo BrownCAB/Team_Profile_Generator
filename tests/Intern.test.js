@@ -1,5 +1,5 @@
 const Intern = require('../lib/Intern')
-const intern = new intern('jared', '101184', 'jared@faketech.com', 'Los Angeles'); 
+const intern = new Intern('jared', '101184', 'jared@faketech.com', 'Los Angeles'); 
 
 test ('Should create an instance of class intern', () => {
    	expect(intern.name).toBe('Jared')
