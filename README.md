@@ -7,6 +7,7 @@
 ## Table of Contents
 
 - [Description](#Description)
+- [Links](#Links) 
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Testing](#Testing)
@@ -18,6 +19,10 @@
 As a managere I want to generate a webpage that displays my team's basic information so that I have quick access to the email and Github profiles. This Challenge is to combine skills from what we learned so far while meeting the Acceptance Criteria. This application will generate a team profile HTML webpage using node.js based on the user's input in the command line. The application requires Jest, Inquirer for running tests, and collecting data from user.
 
 PSA: I'm unable to complete all the requirements for this challenge at this time due to limitation with my device but I will be making another attempt for submission in the future.
+
+## Links
+
+TBA
 
 ## Installation
 
