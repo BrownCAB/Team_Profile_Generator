@@ -24,7 +24,8 @@ PSA: I'm unable to complete all the requirements for this challenge at this time
 1. To install application, clone using "git clone" command via the HTTP or SSH link on github.
 2. Use the reccomanded file structure to organize the files.
 3. Run "npm install" and then install Jest and Inquirer 8.2.4
-4. Then use "node index" to run the prompts.  
+4. Then use "node index" to run the prompts. 
+5. Lastly, a generated HTML file will and create a output folder for the html if there isn't one already.
 
 ## Usage
 
@@ -33,6 +34,10 @@ The challenge use Node.js, File system module (fs), Inquirer, Javascript and CSS
 ## Testing
 
 This application contains test driven development using the node package "Jest" by using command "npm run test" to run the test.
+
+## Credits 
+Joelle Deschatels video explaination 
+
 
 ## Questions
 
