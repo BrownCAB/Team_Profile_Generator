@@ -1,3 +1,4 @@
+//template helper code
 const generateTeam = (team) => {
 	console.log(team);
 	// Create an empty array to push html elements on to the loop through team data
