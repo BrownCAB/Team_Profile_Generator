@@ -30,8 +30,8 @@ TBA
 2. Use the recommended file structure to organize the files.
 3. Installing npm using "npm init" in the terminal.
 4. Run "npm install" and then install Jest and Inquirer 8.2.4
-4. Then use "node index.js" to run the prompts. 
-5. Lastly, a generated HTML file will be create and an output folder for the html if there isn't one already.
+5. Then use "node index.js" to run the prompts. 
+6. Lastly, a generated HTML file will be create and an output folder for the html if there isn't one already.
 
 ## Usage
 
