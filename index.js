@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const Manager = require('inquirer');
 const Engineer = require('inquirer');
-const Intern = require('inquirere');
+const Intern = require('inquirer');
 
 const generateSite = require('./src/generate-site.js');
 const fs = require("fs");
