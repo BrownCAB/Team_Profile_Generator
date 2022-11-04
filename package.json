@@ -22,5 +22,8 @@
   "homepage": "https://github.com/BrownCAB/Team_Profile_Generator#readme",
   "devDependencies": {
     "jest": "^29.2.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
   }
 }

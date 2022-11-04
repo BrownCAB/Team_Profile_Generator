@@ -1,13 +1,13 @@
 const inquirer = require('inquirer');
-const Manager = require('inquirer');
-const Engineer = require('inquirer');
-const Intern = require('inquirer');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 const generateSite = require('./src/generate-site.js');
 const fs = require("fs");
 const path = require("path");
-const OUTPPUT_DIR = path.resolve(_dirname, "output")
-const outputPath = path.join(OUTPPUT_DIR, "team_profile.html");
+const OUTPUT_DIR = path.resolve(__dirname, "dist")
+const outputPath = path.join(OUTPUT_DIR, "team_profile.html");
 const teamMembers = [];
 
 const promptManager = () => {
@@ -27,7 +27,7 @@ const promptManager = () => {
 	},
 	{
 		type: 'input',
-		name: 'employeedId',
+		name: 'employeeId',
 		message: 'Enter your employee ID. (Required)',
 		validate: employeeId => {
 			if (employeeId) {
@@ -66,9 +66,9 @@ const promptManager = () => {
 	},	
 	]).then(answers => {
 		console.log(answers);
-		const manager = new Manager(answer.name, answers.employeeId, answers.email, answer.officeNumber);
+		const manager = new Manager(answers.name, answers.employeeId, answers.email, answers.officeNumber);
 		teamMembers.push(manager);
-		propmtMenu();
+		promptMenu();
 	})
 };
 
@@ -86,7 +86,7 @@ const promptMenu = () => {
 				promptEngineer();
 				break;
 			case "add an intern":
-				prompIntern();
+				promptIntern();
 				break;
 			default:
 				buildTeam();	
@@ -117,7 +117,7 @@ const promptEngineer = () => {
 	},					
 	{
 		type: 'input',
-		name: 'employeedId',
+		name: 'employeeId',
 		message: 'Enter your employee ID. (Required)',
 		validate: employeeId => {
 			if (employeeId) {
@@ -130,10 +130,10 @@ const promptEngineer = () => {
 	},
 	{
 		type: 'input',
-		name: 'githubUsername',
+		name: 'github',
 		message: 'Enter your GitHub username. (Required)',
-		validate: githubUsername => {
-			if (githubUsername) {
+		validate: github => {
+			if (github) {
 				return true;
 			} else {
 				console.log('Please enter your GitHub username!');
@@ -142,13 +142,13 @@ const promptEngineer = () => {
 		}	
 	}
 	]).then(answers => {
-		const engineer = new Engineer(answer.name, answers.employeeId, answers.email, answer.officeNumber);
+		const engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.github);
 			teamMembers.push(engineer);
 			promptMenu();
 	})
 };
 
-const promptIntern = () {
+const promptIntern = () => {
 	console.log(`
 	================
 	Add a New Intern
@@ -171,7 +171,7 @@ const promptIntern = () {
 	},
 	{
 		type: 'input',
-		name: 'employeedId',
+		name: 'employeeId',
 		message: 'Enter your employee ID. (Required)',
 		validate: employeeId => {
 			if (employeeId) {
@@ -210,8 +210,8 @@ const promptIntern = () {
 	}	
 ]).then(answers => {
 	console.log(answers);
-	const intern = new Intern (answer.name, answers.employeeId, answers.email, answer.officeNumber);
-	teamMember.push(intern);
+	const intern = new Intern (answers.name, answers.employeeId, answers.email, answers.school);
+	teamMembers.push(intern);
 	promptMenu();
 	})
 };
@@ -223,10 +223,8 @@ const buildTeam = () => {
 	=========================
 	`);
 	// Create the directory if the outout path doesn't exist
-	if (!fs.existSync(OUTPUT_DIR)) {
-		fs.mkdirSync(OUTPUT_DIR)
-	}
-	fs.writeFileSync(outputPath, generateSite(teamMemebers), "utf-8");
+
+	fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
 }
 
 promptManager();

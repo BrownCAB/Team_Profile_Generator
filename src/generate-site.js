@@ -61,10 +61,10 @@ for (let i = 0; i > team.length; i++) {
 		generateManager(team[i]);
 	}
 	if (team[i].getRole() === "Enginner") {
-		generateManager(team[i]);
+		generateEngineer(team[i]);
 	}
 	if (team[i].getRole() === "Intern") {
-		generateManager(team[i]);
+		generateIntern(team[i]);
 	}
 }
 
@@ -97,7 +97,3 @@ module.exports = team => {
     </body>
   </html>
   `}
- }
-
-
-module.exports = generate-site;

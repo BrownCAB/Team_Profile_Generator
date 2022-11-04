@@ -2,7 +2,8 @@ const Employee = require('../lib/Employee')
 const employee = new Employee('jared', '101184', 'jared@faketech.com'); 
 
 test ('Should create an instance of class Employee', () => {
-   expect(employee.name).toBe('Jared')
+   expect(typeof employee).toBe("object")
+   expect(employee.name).toBe('jared')
    expect(employee.id).toBe('101184')
    expect(employee.email).toBe('jared@faketech.com')
 });
@@ -12,11 +13,11 @@ test ('if we get the name from getName() method', () => {
 });
 
 test ('if we get the Id from getId() method', () => {
-   expect(employee.getId()).toBe('jared');
+   expect(employee.getId()).toBe('101184');
 });
 
 test ('if we get the Email from getEmail() method', () => {
-   expect(employee.getEmail()).toBe('jared');
+   expect(employee.getEmail()).toBe('jared@faketech.com');
 });
 
 test ('if we get the Role from getRole() method', () => {
