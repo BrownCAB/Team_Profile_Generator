@@ -39,7 +39,7 @@ The challenge use Node.js, File system module (fs), Inquirer, Javascript and CSS
 
 ## Testing
 
-This application contains test driven development using the node package "Jest" by using command "npm run test" to run the test.
+This application contains test driven development using the node package "Jest" by using command "npm run test" or "npm test" to run the test.
 
 ## Credits 
 Joelle Deschatels video explaination 
