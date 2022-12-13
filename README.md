@@ -22,11 +22,7 @@ As a manager I want to generate a webpage that displays my team's basic informat
 
 <img src="./assets/team_profile_generator.gif">
   <br>
-  <a href="
-
-https://user-images.githubusercontent.com/110314270/207427260-73614cc6-44ca-4367-8f3c-d0c9d2d0dc19.mp4
-
-">Walkthrough Video</a> 
+  <a href="https://user-images.githubusercontent.com/110314270/207427260-73614cc6-44ca-4367-8f3c-d0c9d2d0dc19.mp4">Walkthrough Video</a> 
   <br>
   <a href="https://github.com/BrownCAB/Team_Profile_Generator/blob/main/assets/team_profile_generator.mp4">Download Walkthrough Video</a> 
   <br>
