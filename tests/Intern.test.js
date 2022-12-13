@@ -24,7 +24,7 @@ test ('if we get the Role from getRole() method', () => {
    expect(intern.getRole()).toBe('Intern');
 });
 
-test ('if we get the Role from getSchool() method', () => {
+test ('if we get the school from getSchool() method', () => {
    expect(intern.getSchool()).toBe('Los Angeles');
 });
 

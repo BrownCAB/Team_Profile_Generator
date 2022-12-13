@@ -130,6 +130,19 @@ const promptEngineer = () => {
 	},
 	{
 		type: 'input',
+		name: 'email',
+		message: 'Enter your email address (Required)',
+		validate: email => {
+			if (email) {
+				return true;
+			} else {
+				console.log('Please enter your email address!');
+				return false;
+			}
+		}
+	},
+	{
+		type: 'input',
 		name: 'github',
 		message: 'Enter your GitHub username. (Required)',
 		validate: github => {
@@ -223,7 +236,7 @@ const buildTeam = () => {
 	=========================
 	`);
 	// Create the directory if the outout path doesn't exist
-
+	console.log(generateSite(teamMembers))
 	fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
 }
 
