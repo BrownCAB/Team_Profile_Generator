@@ -22,7 +22,12 @@ PSA: I'm unable to complete all the requirements for this challenge at this time
 
 ## Links
 
-TBA
+<img src="./assets/team_profile_generator.gif">
+  <br>
+  <a href="">Walkthrough Video</a> 
+  <br>
+  <a href="https://github.com/BrownCAB/Team_Profile_Generator/blob/main/assets/team_profile_generator.mp4">Download Walkthrough Video</a> 
+  <br>
 
 ## Installation
 
